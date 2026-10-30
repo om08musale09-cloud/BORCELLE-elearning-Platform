@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #e6edf3;
+    color: #1e293b;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Neumorphic Helper Utilities */
+@layer utilities {
+  .neu-flat {
+    background: #e6edf3;
+    box-shadow: 6px 6px 14px #c3cdd7, -6px -6px 14px #ffffff;
+  }
+  
+  .neu-raised-card {
+    background: linear-gradient(145deg, #f0f8ff, #dde4ec);
+    box-shadow: 8px 8px 18px #bcc7d2, -8px -8px 18px #ffffff;
+  }
+
+  .neu-raised-surface {
+    background: #e6edf3;
+    box-shadow: 7px 7px 15px #c3cdd7, -7px -7px 15px #ffffff;
+  }
+
+  .neu-concave {
+    background: linear-gradient(145deg, #cfd8e2, #f5feff);
+    box-shadow: 6px 6px 14px #c3cdd7, -6px -6px 14px #ffffff;
+  }
+
+  .neu-convex {
+    background: linear-gradient(145deg, #f6ffff, #cfd8e2);
+    box-shadow: 6px 6px 14px #c3cdd7, -6px -6px 14px #ffffff;
+  }
+
+  .neu-inset {
+    background: #e6edf3;
+    box-shadow: inset 4px 4px 8px #c2ccd7, inset -4px -4px 8px #ffffff;
+  }
+
+  .neu-inset-sm {
+    background: #e6edf3;
+    box-shadow: inset 2px 2px 5px #c2ccd7, inset -2px -2px 5px #ffffff;
+  }
+
+  .neu-pill-active {
+    background: #e6edf3;
+    box-shadow: inset 3px 3px 6px #bcc6d1, inset -3px -3px 6px #ffffff;
+    color: #2563eb;
+  }
+
+  .neu-btn-interactive {
+    background: #e6edf3;
+    box-shadow: 5px 5px 12px #c3cdd7, -5px -5px 12px #ffffff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neu-btn-interactive:hover {
+    box-shadow: 3px 3px 7px #c3cdd7, -3px -3px 7px #ffffff;
+    transform: translateY(1px);
+  }
+
+  .neu-btn-interactive:active {
+    box-shadow: inset 3px 3px 6px #c0cbda, inset -3px -3px 6px #ffffff;
+    transform: translateY(2px);
+  }
+}
+
+/* Custom sleek scrollbar matching Neumorphic theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e6edf3;
+  box-shadow: inset 2px 2px 4px #c2ccd7, inset -2px -2px 4px #ffffff;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8c4d0;
+  border-radius: 9999px;
+  border: 2px solid #e6edf3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
